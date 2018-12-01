@@ -1,4 +1,5 @@
 # Huty's Quest
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/chingu-voyage7/Bears-Team-18.svg?columns=all)](https://waffle.io/chingu-voyage7/Bears-Team-18)
 
 A simple 2d treasure hunt game.
 
