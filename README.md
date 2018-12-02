@@ -1,7 +1,8 @@
-# Huty's Quest
+# Huty's Hunt
+
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/chingu-voyage7/Bears-Team-18.svg?columns=all)](https://waffle.io/chingu-voyage7/Bears-Team-18)
 
-A simple 2d treasure hunt game.
+Huty's Hunt is a simple puzzle game where a user finds the door on a map, filled with doors, that leads to the next floor. Its a simple game made built for learning purposes. The tech stack is Revel(Golang), React(Javascript), and  Phaser(Javascript).
 
 ## Getting Started
 
@@ -85,4 +86,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Hat tip to anyone whose code was used
 * Inspiration
-* etc
