@@ -1,0 +1,13 @@
+{
+  "name": "hutys-hunt",
+  "version": "0.0.1",
+  "description": "puzzle adventure game.",
+  "main": "frontend/src/index.js",
+  "scripts": {
+    "start": "cd frontend && react-scripts start",
+    "test": "cd frontend && react-scripts test"
+  },
+  "repository": "git@github.com:afixoftrix/Bears-Team-18.git",
+  "author": "Unwana Essien <unwana.essien@outlook.com>",
+  "license": "MIT"
+}
