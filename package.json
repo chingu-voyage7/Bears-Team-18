@@ -5,7 +5,8 @@
   "main": "frontend/src/index.js",
   "scripts": {
     "start": "cd frontend && yarn start",
-    "test": "cd frontend && yarn test --watchAll"
+    "test": "cd frontend && yarn test --watchAll",
+    "install": "cd frontend && yarn install"
   },
   "repository": "git@github.com:afixoftrix/Bears-Team-18.git",
   "author": "Unwana Essien <unwana.essien@outlook.com>",
