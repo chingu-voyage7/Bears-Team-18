@@ -6,8 +6,7 @@
   "scripts": {
     "start": "cd frontend && yarn start",
     "test": "cd frontend && yarn test",
-    "install": "cd frontend && yarn install",
-    "done": "q"
+    "install": "cd frontend && yarn install"
   },
   "repository": "git@github.com:afixoftrix/Bears-Team-18.git",
   "author": "Unwana Essien <unwana.essien@outlook.com>",
