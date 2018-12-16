@@ -4,10 +4,12 @@
   "description": "puzzle adventure game.",
   "main": "frontend/src/index.js",
   "scripts": {
-    "start": "cd frontend && react-scripts start",
-    "test": "cd frontend && react-scripts test"
+    "start": "cd frontend && yarn start",
+    "test": "cd frontend && yarn test --watchAll",
+    "jest-test": "cd frontend && jest --watchAll"
   },
   "repository": "git@github.com:afixoftrix/Bears-Team-18.git",
   "author": "Unwana Essien <unwana.essien@outlook.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }
