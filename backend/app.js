@@ -20,8 +20,10 @@ app.use(express.static(__dirname+'/public'));
 
 // Mongoose
 const dbConn = process.env.MONGOLAB_URI;
+mongoose.Promise = require('bluebird');
 mongoose.connect(dbConn, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    promiseLibrary: require('bluebird')
   }).then(() => console.log('DB Connected.'))
   .catch(err => console.log(err));
 mongoose.set('useCreateIndex', true);
