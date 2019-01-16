@@ -1,26 +1,27 @@
 import React from "react";
-import styled from "styled-components";
+
 import GameName from "../components/GameName";
 import mage from "../resources/bgmaze.svg";
+import { OuterContainer, Container } from "../components/styled-components"
+import Navbar from "../components/Navbar";
 //import PropTypes from 'prop-types';
 
-const OuterContainer = styled.div`
-    display: block;
-`;
-const Container = styled.div`
-    height: 100vh;
-    background: var(--mdc-theme-primary) url(${mage}) center / contain no-repeat;
-`;
 
-const Home = props => {
-    return (
-        <OuterContainer>
-            <Container>
-                <GameName />
-            </Container>
-        </OuterContainer>
-    );
-};
+
+class Home extends React.Component{
+    render(){
+        return (
+            <div app="App">
+                <Navbar />
+                <OuterContainer>
+                    <Container mage={mage}>
+                        <GameName />
+                    </Container>
+                </OuterContainer>
+            </div>
+        );
+    }
+}
 
 //Home.propTypes = {};
 

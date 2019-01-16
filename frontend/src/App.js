@@ -1,16 +1,18 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+
 import Home from "./pages/Home";
+import Game from "./pages/Gamepage"
 import "./App.css";
-import Navbar from "./components/Navbar";
 
 class App extends Component {
     render() {
-        return (
-            <div className="App">
-                <Navbar />
-                <Home />
-            </div>
-        )
+        const { location } = this.props;
+
+        return <Switch>
+                <Route location={location} path="/" exact component={Home} />
+                <Route location={location} path="/play" exact component={Game} />
+            </Switch>;
     }
 }
 

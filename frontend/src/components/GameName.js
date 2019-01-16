@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button, ButtonIcon } from "@rmwc/button";
+import { Link } from "react-router-dom";
+
 import Icon from './Icon'
 import "@material/button/dist/mdc.button.css";
 import bgImage from "../resources/maze.svg"
@@ -27,17 +29,25 @@ const Btn = styled(Button)`
     background-color: var(--mdc-theme-secondary) !important;
     color: #FFF !important;
 `;
+const Centered = styled.div`
+    margin: 0 auto;
+    width: 138px;
+`
 
 const Name = props => (
     <Container>
         <Title>Huty's<br />Hunt</Title>
         <BtnContainer>
-            <Btn raised theme="on-secondary" accent>
-                <ButtonIcon>
-                    <Icon pathColor="#FFF" />
-                </ButtonIcon>
-                Play Now!
-            </Btn>
+            <Centered>
+                <Link to="/play">
+                    <Btn raised theme="on-secondary" accent>
+                        <ButtonIcon>
+                            <Icon pathColor="#FFF" />
+                        </ButtonIcon>
+                        Play Now!
+                    </Btn>
+                </Link>
+            </Centered>
         </BtnContainer>
     </Container>
 );
