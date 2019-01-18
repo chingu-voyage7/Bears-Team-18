@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount() {
+    axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
+  }
+
+  logout = () => {
+    localStorage.removeItem('jwtToken');
+    window.location.reload();
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>

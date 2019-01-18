@@ -6,6 +6,7 @@ const slugify = require('slugify');
 const User = require("../../models/User");
 
 module.exports.register = (req, res) => {
+  console.log(req.body);
   if (!req.body.username || !req.body.password) {
     return res.json({success: false, msg: 'Enter a username and password.'});
   } else {
@@ -14,7 +15,9 @@ module.exports.register = (req, res) => {
       password: req.body.password
     };
     User.addUser(newUser)
-      .then(user => res.json({success: true, user: user, msg: 'Hello Gamer, Kindly login to continue.'}))
+      .then(user => {
+        res.json({success: true, msg: 'Hello Gamer, Kindly login to continue.'})
+      })
       .catch(err => {
         console.log(err);
         return res.json({success: false, msg: 'Username already exists'})
@@ -31,7 +34,12 @@ module.exports.login = (req, res) => {
             .then(isMatch => {
               if(isMatch.success) {
                 const token = jwt.sign(user.toJSON(), settings.secret);
-                return res.json({success: true, user: user, token: `JWT ${token}`, msg: `Hello ${user.username}, Welcome and Good Luck.`});
+                const authenticated_user = {
+                  username: user.username,
+                  level: user.level,
+                  score: user.score
+                }
+                return res.json({success: true, user: authenticated_user, token: `JWT ${token}`, msg: `Hello ${user.username}, Welcome and Good Luck.`});
               } else {
                 return res.json({success: false, msg: 'Incorrect username or password'});
               }
